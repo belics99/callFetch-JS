@@ -8,13 +8,14 @@
  }
  
  PARAMS:
- ========================
- URL, DATA, FUNC, OPTIONS
- ------------------------
+ ================================
+ URL, DATA, FUNC, METHOD, HEADER
+ --------------------------------
  URL     - endpoint
  DATA    - data for endpoint
  FUNC    - callback function 
- OPTIONS - options for fetch
+ METHOD  - post/get...
+ HEADER  - Content-Type...
  */
  callFetch = async ( {url= '', data = {}, func = (result = 'ok')=>{console.log(result)}, method = 'POST', header = {'Content-Type': 'application/json;charset=utf-8'} })=>{
     const  options = {
