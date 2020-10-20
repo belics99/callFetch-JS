@@ -3,7 +3,7 @@
  ================
  options = {
  	method : 'POST',
- 	header : {'Content-Type': 'application/json;charset=utf-8'},
+ 	headers : {'Content-Type': 'application/json;charset=utf-8'},
  	body : JSON.stringify(data)
  }
  
@@ -15,12 +15,12 @@
  DATA    - data for endpoint
  FUNC    - callback function 
  METHOD  - post/get...
- HEADER  - Content-Type...
+ HEADERS  - Content-Type...
  */
- callFetch = async ( {url= '', data = {}, func = (result = 'ok')=>{console.log(result)}, method = 'POST', header = {'Content-Type': 'application/json;charset=utf-8'} })=>{
+ callFetch = async ( {url= '', data = {}, func = (result = 'ok')=>{console.log(result)}, method = 'POST', headers = {'Content-Type': 'application/json;charset=utf-8'} })=>{
     const  options = {
       method : method,
-      header : header,
+      headers : headers,
       body : JSON.stringify(data)
     }
     let response = await fetch(url, options)
