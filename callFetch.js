@@ -17,7 +17,7 @@
  METHOD  - post/get...
  HEADERS  - Content-Type...
  */
- callFetch = async ( {url= '', data = {}, func = (result = 'ok')=>{console.log(result)}, method = 'POST', headers = {'Content-Type': 'application/json;charset=utf-8'} })=>{
+ async function callFetch( {url= '', data = {}, func = (result = 'ok')=>{console.log(result)}, method = 'POST', headers = {'Content-Type': 'application/json;charset=utf-8'} })=>{
     const  options = {
       method : method,
       headers : headers,
